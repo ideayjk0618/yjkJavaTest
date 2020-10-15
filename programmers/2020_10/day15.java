@@ -12,7 +12,7 @@ class Solution {
             // 소숫점 앞까지만 출력.
             strSqrt = strSqrt.substring(0, getPoint);
             long longSqrt = Long.parseLong(strSqrt);
-            if (n == Math.pow(longSqrt, 2)) { // 여기는 
+            if (n == Math.pow(longSqrt, 2)) {
                 longSqrt++;
                 // 실수 -> 정수로 형변환
                 answer = (long)Math.pow(longSqrt, 2);
