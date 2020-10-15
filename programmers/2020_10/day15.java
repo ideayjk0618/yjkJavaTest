@@ -21,7 +21,6 @@ class Solution {
             }
             
         }
-        System.out.print(144 == 144.0);
-        return answer;
+      return answer;
     }
 
