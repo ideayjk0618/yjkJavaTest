@@ -19,8 +19,7 @@ class Solution {
             } else {
                 answer = -1;
             }
-            
         }
-      return answer;
+        return answer;
     }
-
+}
