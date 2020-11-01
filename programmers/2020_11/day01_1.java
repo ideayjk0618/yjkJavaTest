@@ -15,7 +15,7 @@ class Solution
 				for (String strS : arrS) {
 					if (list.size() != 0) {
 						String lastNum = list.get(list.size()-1);
-            // 마지막에 들어간 값과 현재의 값을 비교한다.
+            				// 마지막에 들어간 값과 현재의 값을 비교한다.
 						if (strS.equals(lastNum)) {
 							list.remove(list.size()-1);
 						} else {
