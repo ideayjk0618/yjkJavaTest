@@ -29,8 +29,8 @@ class Solution {
 				char getNum = number.charAt(j);
 				if (max < getNum) {
 					max = getNum;
-					if (max == 9) break;
 					idx = j + 1;
+					if (max == '9') break;
 				}
 			}
 			answer.append(max);
