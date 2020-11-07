@@ -21,10 +21,10 @@ class Solution {
             	// System.out.println(a_z +":"+z_a);
             	// System.out.println(number);
             } else if (65 == getAbc) {
-        		if (i < 2) {
+        		if (i > 1) {
         			// 왼쪽으로 방향을 튼다.
-        			//number++;
-              // A가 되면 아무짓도 하지 않는다.
+        			number++;
+                    // 3,4,5,7 문제 맞음 -> 11번은 여전히 실패 12번 새롭게 실패
         		}
             }
             answer = number;
