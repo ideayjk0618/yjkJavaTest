@@ -22,12 +22,8 @@ class Solution {
             		number += down;
             	}
             } else if (65 == getAbc) {
-                int mid = name.length() / 2;
-                if (i < mid) {
-                    left = i+1;
-                } else {
-                    left = right;
-                }
+                
+                left = right;
             }
         }
         // System.out.print(number);
