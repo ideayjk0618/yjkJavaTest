@@ -11,6 +11,10 @@ class Solution {
         for (int i = 0; i < name.length(); i++) {
             int getAbc = (int) name.charAt(i);
             if (65 < getAbc) {
+                if (left != 0) {
+                    right = left + right;
+                    left = 0;
+                }
             	if (i != 0) {
             		right++;
             	}
@@ -22,13 +26,16 @@ class Solution {
             		number += down;
             	}
             } else if (65 == getAbc) {
-                
                 left = right;
+                if (i == name.length()-1) {
+                    rigth++;
+                }
+
             }
+            // System.out.print(right +":"+left);
         }
         // System.out.print(number);
-        // System.out.print(right +":"+left);
-        answer = number + left + right;
+        answer = number + right;
 
         return answer;
     }
