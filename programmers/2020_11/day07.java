@@ -27,9 +27,9 @@ class Solution {
             	}
             } else if (65 == getAbc) {
                 left = right;
-                if (i == name.length()-1) {
-                    rigth++;
-                }
+//                 if (i == name.length()-1) {
+//                     rigth++;
+//                 }
 
             }
             // System.out.print(right +":"+left);
