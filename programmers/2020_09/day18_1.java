@@ -20,6 +20,7 @@ class Solution {
             } else {
                 if (NAME_KIM.equals(getName)) {
                    answer = String.format("김서방은 %d에 있다", index);
+                    break; // 효율성을 위해 해당 조건에 맞으면 반복문을 종료한다.
                 }
                 index++;
             }
