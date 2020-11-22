@@ -3,6 +3,7 @@ import java.util.Calendar;
 class Solution {
     
     //固定数字(年)：2016
+    // 고정문자열(연) : 2016
     private int YEAR = 2016;
     
     public String solution(int a, int b) {
