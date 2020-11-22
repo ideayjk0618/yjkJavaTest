@@ -18,9 +18,11 @@ class Solution {
             return answer;
         } else {
             for (int i = 1; i <= n; i++) {
+                // 2의 배수인경우
                 if (i % 2 == 0) {
                     answer = answer + STR_PARK;
                 } else {
+                    // 2
                     answer = answer + STR_SU;
                 }
             }
