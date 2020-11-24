@@ -15,6 +15,7 @@ class Solution {
                 // 행의 길이가 500이상일때 
                 return answer;
             } else {
+                // 선언
                 answer = new int[arr1.length][arr1[0].length];
                 
                 for (int i = 0; i < arr1.length; i++) {
