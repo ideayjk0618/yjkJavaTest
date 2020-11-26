@@ -10,7 +10,11 @@ class Solution {
             return answer;
         } else {
             // 행렬1,2의 크키가 같아야만 해당 서비스를 진행한다.
-            if (arr1.length == arr2.length) {
+            if (arr1.length != arr2.length) {
+                return answer;
+            } else if (arr1[0].length != arr2[0].length) {
+                return answer;
+            } else {
                 answer = new int [arr1.length] [arr1[0].length];
                 for (int i = 0; i < arr1.length; i++) {
                     for (int j = 0; j < arr1[0].length; j++) {
