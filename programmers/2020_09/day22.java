@@ -7,12 +7,12 @@ class Solution {
         
         // 배열 생성 配列を生成
         ArrayList<Integer> list = new ArrayList<Integer>();
-        
+        //　制限条件
         if (arr.length < 1) {
             return answer;
         } else {
             for (int arrNum : arr) {
-                // 나머지값이 0인가 체크　剰余が０のかを確認
+                // 나머지값이 0인가 체크　剰余が０の場合配列に追加する
                if (arrNum % divisor == 0) {
                    list.add(arrNum);
                } 
