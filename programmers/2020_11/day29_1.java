@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 class Solution {
     public int solution(int n) {
         int answer = 0;
