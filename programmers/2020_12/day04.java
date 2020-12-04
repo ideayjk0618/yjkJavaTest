@@ -3,6 +3,7 @@ import java.util.TreeMap;
 class Solution {
     public int solution(int n, int[] lost, int[] reserve) {
         int answer = 0;
+        final int INT_N = n - 1;
         
         // 트리맵은 key를 기준으로 오름차순으로 자동 정렬한다
         // 그래서 HashMap에 비하면 조금 효율성이 떨어짐
@@ -28,44 +29,47 @@ class Solution {
             }
         }
         
-        for (int j = 0; j < treeMap.size(); j++) {
+        for (int j = 1; j <= treeMap.size(); j++) {
             int student = treeMap.get(j);
-            
-            if ()
-            
-            if (0 == student) {
-                // switch에서 case쓸때 final(절대값)만을 사용할수있다.
-                // 아니면 'constant expression required'라는 에러 발생
-                switch (j) {
-                    case 1 :
-                        int nextStudent = treeMap.get(2);
-                        if (nextStudent > 1) {
-                            treeMap.put(1, 1);
-                            treeMap.put(2, 1);
-                        }
-                        break;
-                    case INT_N :
-                        int beforeStudent = treeMap.get(INT_N-1);
-                        if (beforeStudent > 1) {
-                            treeMap.put(INT_N, 1);
-                            treeMap.put(INT_N-1, 1);
-                        }
-                        break;
-                    default :
-                        int nextStudent2 = treeMap.get(j+1);
-                        int beforeStudent2 = treeMap.get(j-1);
-                        if (nextStudent2 > 1) {
-                            treeMap.put(j, 1);
-                            treeMap.put(j+1, 1);
-                        } else if (beforeStudent2 > 1) {
-                            treeMap.put(j, 1);
-                            treeMap.put(j-1, 1);
-                        }
-                        break;
+            if (1 == j) {
+                if (0 == student) {
+                    int nextStudent = treeMap.get(j+1);
+                    if (1 < nextStudent) {
+                        treeMap.put(j, 1);
+                        treeMap.put(j+1, 1);
+                    }
+                }
+            } else if (n == j) {
+                if (0 == student) {
+                    int beforeStudent = treeMap.get(n);
+                    if (1 < beforeStudent) {
+                        treeMap.put(n, 1);
+                        treeMap.put(n-1, 1);
+                    }
+                }
+            } else {
+                if (0 == student) {
+                    int nextStudent2 = treeMap.get(j+1);
+                    int beforeStudent2 = treeMap.get(j-1);
+                    if (nextStudent2 > 1) {
+                        treeMap.put(j, 1);
+                        treeMap.put(j+1, 1);
+                    } else if (beforeStudent2 > 1) {
+                        treeMap.put(j, 1);
+                        treeMap.put(j-1, 1);
+                    }
                 }
             }
         }
-        System.out.print(treeMap);
+        int count = 0;
+        for (int z = 1; z <= treeMap.size(); z++) {
+            int getResult = treeMap.get(z);
+            if (0 == getResult) {
+                count++;
+            }
+        }
+        
+        answer = n - count;
         
         return answer;
     }
