@@ -9,7 +9,6 @@ class Solution {
         Arrays.sort(lost);
         Arrays.sort(reserve);
         
-        
         // 예외처리
         if (n < 2 || n > 30) {
             return answer;
