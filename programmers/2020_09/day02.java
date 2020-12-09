@@ -36,7 +36,7 @@ class Solution {
         }
         return answer;
     }
-    
+    // value값을 key검색하는 메서드
     public static int searchKey(Map<Integer, String> map, String searchValue) {
         for (int key : map.keySet()) {
             if (searchValue.equals(map.get(key))) {
