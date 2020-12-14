@@ -42,9 +42,11 @@ class Solution {
             int getPoint = commands[i][TWO];
 
             ArrayList<Integer> arr = new ArrayList<Integer>();
+            
             for (int j = startPoint-1; j <= endPoint-1; j++) {
                 arr.add(array[j]);
             }
+            
             // 오름차순 정렬　昇順
             Collections.sort(arr);
             
