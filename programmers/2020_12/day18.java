@@ -32,6 +32,7 @@ class Solution
                 }
             }
         }
+        
         // 정사각형이므로 가로와 세로가 같으므로 answer을 다시 곱한다
         answer *= answer;
 
