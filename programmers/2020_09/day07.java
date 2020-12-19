@@ -1,6 +1,6 @@
 class Solution {
     
-    // 고정문자열 固定文字列
+    // 고정문자열
     private char STR_Y = 'Y';
     private char STR_P = 'P';
     
