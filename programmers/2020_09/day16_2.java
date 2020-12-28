@@ -20,9 +20,9 @@ class Solution {
             return answer;
         }
         
-        //基本値
-        int i = 0;
         //次の値
+        int i = 0;
+        //基本値
         int j = 0;
         
         //　配列を1つを選択する。
