@@ -48,6 +48,7 @@ class Solution {
         int shSize = hs.size();
         //結果配列の宣言
         answer = new int[shSize];
+        
         int z = 0;
         for(int getNum : hs) {
             answer[z] = getNum;
@@ -55,6 +56,7 @@ class Solution {
         }
         //昇順
         Arrays.sort(answer);
+        
         return answer;
     }
 }
