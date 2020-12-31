@@ -5,7 +5,7 @@ public class Solution {
         //　Nが100000000以上の場合、サービス終了 N이 100000000보다 큰경우, 서비스종료
         if (n > 100000000) {
             return answer;
-        } else if (0 < 0) {
+        } else if (n < 0) {
             // 음수 인경우, 서비스 종료 アイナス値の場合はサービス終了
             return answer;
         } else {
