@@ -21,11 +21,11 @@ class Solution {
         int math2_con = 0; // 수포자2의 맞춘갯수    
         int math3_con = 0; // 수포자3의 맞춘갯수
         
-        // 에러처리 (10,000문제)
+        // 에러처리 (최대 10,000문제)
         if (answers.length > 10000) {
             return answer;
         } else {
-            // 에러처리 (정답은 1~5)
+            // 에러처리 (정답의 값크기 1~5)
             for (int ans : answers) {
                 if (ans < 1 || ans > 5) {
                     return answer;
