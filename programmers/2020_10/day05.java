@@ -1,5 +1,6 @@
 class Solution {
     
+    // 스페이스 (띄어쓰기)
     private String SPACE = " ";
     
     public String solution(String s) {
