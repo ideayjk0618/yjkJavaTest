@@ -41,7 +41,6 @@ class Solution {
                             strings[j] = temp2;
                         }
                     }
-                    
                 }
             }
         }        
