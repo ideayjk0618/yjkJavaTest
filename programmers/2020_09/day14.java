@@ -16,13 +16,13 @@ class Solution {
     
     public String solution(int[] numbers, String hand) {
         
-        // number 크기 체크 0<number<1001
+        // numbers 크기 체크 0<numbers<1001
         if (numbers.length < 1) {
             return answer;
         } else if (numbers.length > 1000) {
             return answer;
         }
-        // number 원소값 체크 
+        // numbers 원소값 체크 0<=i<=9
         for (int i : numbers) {
             if (i < 0) {
                 return answer;
@@ -31,7 +31,6 @@ class Solution {
             }
         }
 
-        
         for (int num : numbers) {
             switch (num) {
                 case 1: l_location = 1;
