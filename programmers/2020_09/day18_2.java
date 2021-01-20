@@ -19,8 +19,9 @@ public class Solution {
        }
         //結果の配列を宣言する。answer의 사이즈를 정의한다.
         answer = new int [list.size()];
+        // 
         int idx = 0;
-        //データを入れる list의 값을 answer에 넣는다. 
+        //データを入れる。 list의 값을 answer에 넣는다. 
         for(int num : list) {
             answer[idx] = num;
             idx++;
