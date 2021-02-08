@@ -7,31 +7,52 @@ class Solution {
         int[][] arr = new int [n+1][n+1];
         int[] answer = new int[boxs];
         int count = 1;
-        int a1 = 0;
+        int a1 = 0, a2 = 0, a3 = 1;
         int a = 0, b = 0, c = 0;
         while (count <= boxs) {
-            for (a = 0; a < n; a++) {
-                arr[a1][a] = count;
-                count++;
+            for (a = a2; a < n; a++) {
+                if (1 > arr[a][a1]) {
+                    arr[a][a1] = count;
+                    System.out.println("a"+a+":"+count);
+                    count++;
+                }
             }
             a--;
-            for (b = 1; b < n; b++) {
-                arr[a][b] = count;
-                count++;
+            if (count >= boxs) {
+                break;
+            }
+            for (b = a3; b < n; b++) {
+                if (1 > arr[a][b]) {
+                    arr[a][b] = count;System.out.println("b"+b+":"+count);
+                    count++;
+                }
             }
             b--;
+            if (count >= boxs) {
+                break;
+            }
+            b--;
+            // System.out.println("bbb"+b);
             for (c = b; c > 0; c--) {
-                arr[c][c] = count;
-                count++;
+                if (1 > arr[c][c]) {
+                    arr[c][c] = count;System.out.println("c"+c+":"+count);
+                    count++;
+                }
+            }
+            if (count >= boxs) {
+                break;
             }
             a1++;
+            a2++;
+            a3++;
         }
-        
+        int idx = 0;
         for (int x = 0; x < arr.length; x++) {
             for (int y = 0; y < arr[x].length; y++) {
                 int num = arr[x][y];
                 if (0 != num) {
-                    System.out.println(num);
+                    //System.out.println(num);
+                    answer[idx++] = num;
                 }
             }
         }
