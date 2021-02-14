@@ -13,7 +13,7 @@ class Solution {
             char getS = s.charAt(i);
             
             // ()가 아닌경우 반환한다.
-            if (40 > getS && 41 < getS) {
+            if (40 > getS || 41 < getS) {
                 return answer;
             } else {
                 // 첫번째 문자열이 아닌경우 배열에 추가한다.
@@ -22,7 +22,8 @@ class Solution {
                         listChar.add(getS);
                     } else {
                         char last = listChar.get(listChar.size()-1);
-                        if (last != getS) {
+                        // 마지막 값과 비교해서 괄호가 된다면 리스트의 마지막값을 지운다.
+                        if (40 == last && 41 == getS) {
                             listChar.remove(listChar.size()-1);
                         } else {
                             listChar.add(getS);
@@ -46,7 +47,8 @@ class Solution {
             for (int j = 0; j < listChar.size()-1; j++) {
                 char s1 = listChar.get(j);
                 char s2 = listChar.get(j+1);
-                if (s1 != s2) {
+                // 괄호가 된다면 j, j+1를 리스트에서 지운다.
+                if (40 == s1 && 41 == s2) {
                     listChar.remove(j);
                     listChar.remove(j);
                     j = -1;
